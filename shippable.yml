@@ -36,6 +36,6 @@ integrations:
       type: docker
       branches:
         only:
-          - post-ci
+          - post_ci
           
 
