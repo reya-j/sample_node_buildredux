@@ -37,6 +37,3 @@ integrations:
         only:
           - pre-ci
           
-
-
-
