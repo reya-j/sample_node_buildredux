@@ -13,13 +13,13 @@ env:
     - M1=ONE
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/hitchcock3_sample_node .
+  #pre_ci:
+   # - docker build -t=shippabledocker/hitchcock3_sample_node .
 
   pre_ci_boot:
-    image_name: shippabledocker/hitchcock3_sample_node
+    image_name: drydock/u14nodall
     image_tag: latest
-    pull: false
+    pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
@@ -27,7 +27,8 @@ build:
     - ls -al
 
   post_ci:
-    - docker push shippabledocker/hitchcock3_sample_node
+    - docker build -t=shippabledocker/hitchcock3_sample_node1 .
+    - docker push shippabledocker/hitchcock3_sample_node1
 
 integrations:
   hub:
@@ -35,6 +36,6 @@ integrations:
       type: docker
       branches:
         only:
-          - master
+          - post-ci
           
 
