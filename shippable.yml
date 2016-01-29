@@ -2,8 +2,12 @@
 language: node_js
 
 # Version number
-#node_js:
- # - 0.12
+node_js:
+ # - 0.6
+  #- 0.8
+  - 0.15
+  - 0.16
+  - 0.7
 
 env:
   global:
