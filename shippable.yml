@@ -35,6 +35,6 @@ integrations:
       type: docker
       branches:
         only:
-          - dryock
+          - dryockimage
           
 
