@@ -2,8 +2,8 @@
 language: node_js
 
 # Version number
-#node_js:
- # - 0.12
+node_js:
+  - 0.12
 
 env:
   global:
@@ -18,7 +18,7 @@ build:
 
   pre_ci_boot:
     image_name: drydock/u14nodall
-    image_tag: latest
+    image_tag: prod
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
