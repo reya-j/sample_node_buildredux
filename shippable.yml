@@ -28,6 +28,8 @@ build:
     - ls -al
     - echo $M1
     - echo $M2
+    
+    
 
   #post_ci:
     ##- docker push shippabledocker/hitchcock3_sample_node
