@@ -18,6 +18,10 @@ matrix:
    - node_js: "0.11"
      env: 
       - M1=ONE
+ exclude: 
+   - node_js: "0.12"
+     env: 
+      - M2=TWO
 build:
   #pre_ci:
     #- docker build -t=shippabledocker/hitchcock3_sample_node .
