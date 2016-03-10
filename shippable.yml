@@ -7,12 +7,12 @@ node_js:
   - 0.11
 
 env:
-  #global:
-  #- FOO=FUBU
+  global:
+  - FOO=1111
 
-  matrix:
-  - M1=123
-  - M2=567
+  #matrix:
+  #- M1=123
+  #- M2=567
 
 build:
   #pre_ci:
