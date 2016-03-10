@@ -4,6 +4,7 @@ language: node_js
 # Version number
 node_js:
   - 0.12
+  - 0.11
 
 env:
   global:
@@ -13,29 +14,22 @@ env:
     - M1=ONE
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/hitchcock3_sample_node .
+  #pre_ci:
+    #- docker build -t=shippabledocker/hitchcock3_sample_node .
 
-  pre_ci_boot:
-    image_name: shippabledocker/hitchcock3_sample_node
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+ # pre_ci_boot:
+   # image_name: shippabledocker/hitchcock3_sample_node
+   # image_tag: latest
+   ## options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
     - ls -al
+    - echo &M1
 
-  post_ci:
-    - docker push shippabledocker/hitchcock3_sample_node
+  #post_ci:
+    ##- docker push shippabledocker/hitchcock3_sample_node
 
-integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-      branches:
-        only:
-          - master
-          
+
           
 
