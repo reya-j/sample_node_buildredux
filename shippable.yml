@@ -10,7 +10,7 @@ env:
   #global:
   #- FOO=FUBU
 
-  #matrix:
+  matrix:
   - M1="ONE"
   - M2="TWO"
 
