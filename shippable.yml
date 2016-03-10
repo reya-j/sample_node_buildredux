@@ -7,12 +7,15 @@ node_js:
   - 0.11
 
 env:
-  #global:
-  #- FOO=FUBU
+  global:
+   - FOO=FUBU
 
   #matrix:
-  - M1=ONE
-  - M2=TWO
+  #- M1=ONE
+   #- M2=TWO
+matrix:
+  allow_failures:
+    - node_js: "0.11"
 
 build:
   #pre_ci:
@@ -26,6 +29,7 @@ build:
   ci:
     - ps -eax
     - ls -al
+    - if [ "$SHIPPABLE_NODE_VERSION" == "0.11" ]; then foobar; fi
     - echo $M1
     - echo $M2
 
