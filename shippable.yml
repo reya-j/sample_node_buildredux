@@ -11,8 +11,8 @@ env:
   #- FOO=FUBU
 
   #matrix:
-  - M1=ONE
-  - M2=TWO
+  - M1="%ONE"
+  - M2="@TWO"
 
 build:
   #pre_ci:
