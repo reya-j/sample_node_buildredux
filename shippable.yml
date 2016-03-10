@@ -12,7 +12,7 @@ env:
 
   #matrix:
   - M1="ONE"
-  #- M2=TWO
+  - M2="TWO"
 
 build:
   #pre_ci:
