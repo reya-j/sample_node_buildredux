@@ -1,0 +1,3 @@
+[submodule "sampleNod"]
+	path = sampleNod
+	url = https://github.com/shiphitchcock3/sampleNod.git
