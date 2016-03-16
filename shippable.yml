@@ -11,7 +11,7 @@ env:
    - F%OO=FUBU
 
   matrix:
-  - M1="%ONE"
+  - M$1="%ONE"
   - M2="@TWO"
 
 build:
