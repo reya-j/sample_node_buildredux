@@ -8,7 +8,7 @@ node_js:
 
 env:
   global:
-   - F%OO=FUBU
+   - FOO=FUBU
 
   matrix:
   - M$1="%ONE"
