@@ -17,7 +17,7 @@ build:
    # - docker build -t=shippabledocker/hitchcock3_sample_node .
 
   pre_ci_boot:
-    image_name: shippabledocker/hitchcock3_sample_node1
+    image_name: shippabledocker/sample_node_pvt
     image_tag: latest
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
@@ -27,8 +27,8 @@ build:
     - ls -al
 
   post_ci:
-    - docker build -t=shippabledocker/hitchcock3_sample_node11 .
-    - docker push shippabledocker/hitchcock3_sample_node11
+    - docker build -t=shippabledocker/hitchcock3_sample_node111 .
+    - docker push shippabledocker/hitchcock3_sample_node111
 
 integrations:
   hub:
