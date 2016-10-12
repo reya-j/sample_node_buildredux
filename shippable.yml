@@ -32,7 +32,7 @@ build:
 
 integrations:
   hub:
-    - integrationName: ship-docker
+    - integrationName: rc-docker
       type: docker
       branches:
         only:
