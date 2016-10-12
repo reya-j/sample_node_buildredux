@@ -16,14 +16,17 @@ build:
  # pre_ci:
   #  - docker build -t=revathird/testimage .
   pre_ci_boot:
-    image_name: drydock/u12nodall
-    image_tag: prod
+    image_name: shippabledocker/hitchcock3_sample_nodetest
+    image_tag: latest
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
   ci:
     - ps -eax
     - ls -al
-
+integrations:
+  hub:
+    - integrationName: rc-docker
+      type: docker
   #post_ci:
    # - docker push revathird/testimage
 #git:
