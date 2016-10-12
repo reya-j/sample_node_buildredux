@@ -28,6 +28,10 @@ build:
     - ls -al
   post_ci:
     - docker push shippabledocker/hitchcock3_sample_nodetest:latest
+integrations:
+  hub:
+    - integrationName: rc-docker
+      type: docker
   #post_ci:
    # - docker push revathird/testimage
 #git:
