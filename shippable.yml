@@ -16,12 +16,6 @@ build:
  # pre_ci:
   #  - docker build -t=revathird/testimage .
 
-  pre_ci_boot:
-    image_name: shippabledocker/hitchcock3_sample_node
-    image_tag: latest
-    pull: true
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
-
   ci:
     - ps -eax
     - ls -al
@@ -30,11 +24,5 @@ build:
    # - docker push revathird/testimage
 #git:
  #submodules: false
-integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-      
-          
-          
+
 
