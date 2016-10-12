@@ -28,6 +28,7 @@ integrations:
   hub:
     - integrationName: rc-docker
       type: docker
+      
   #post_ci:
    # - docker push revathird/testimage
 #git:
