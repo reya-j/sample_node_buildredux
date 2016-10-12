@@ -18,7 +18,7 @@ env:
 
 build:
   pre_ci:
-    - docker build -t=shippabledocker/hitchcock3_sample_node22: new .
+    - docker build -t=shippabledocker/hitchcock3_sample_node22:new .
 
   pre_ci_boot:
     image_name: shippabledocker/hitchcock3_sample_node22
@@ -31,7 +31,7 @@ build:
     - ls -al
 
   post_ci:
-    - docker push shippabledocker/hitchcock3_sample_node22: new
+    - docker push shippabledocker/hitchcock3_sample_node22:new
 
 integrations:
   hub:
