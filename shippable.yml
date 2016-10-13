@@ -14,16 +14,24 @@ env:
     - M1=ONE
 
 build:
- # pre_ci:
-  #  - docker build -t=revathird/testimage .
+  pre_ci:
+    - docker build -t=shippabledocker/hitchcock3_sample_nodetest:test1 .
+    - docker build -t=shippabledocker/hitchcock3_sample_nodetest:test2 .
+   # - docker build -t=revathird/testimage .
   pre_ci_boot:
     image_name: shippabledocker/hitchcock3_sample_nodetest
     image_tag: latest
-    pull: true
+    pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
   ci:
     - ps -eax
     - ls -al
+  post_ci:
+   # - docker build -t=quay.io/shippablequay/shiphitchcock1_sample_node_bb
+    - docker tag -f drydock/u12nod:prod shippabledocker/hitchcock3_sample_nodetest
+    - docker push shippabledocker/hitchcock3_sample_nodetest:test1
+    - docker tag -f drydock/u12nod:prod shippabledocker/hitchcock3_sample_nodetest
+    - docker push shippabledocker/hitchcock3_sample_nodetest:test2
 integrations:
   hub:
     - integrationName: rc-docker
