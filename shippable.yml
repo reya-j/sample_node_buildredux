@@ -28,9 +28,9 @@ build:
     - ls -al
   post_ci:
    # - docker build -t=quay.io/shippablequay/shiphitchcock1_sample_node_bb
-    - docker tag -f drydock/u12nod:prod shippabledocker/hitchcock3_sample_nodetest
+    - docker tag -f shippabledocker/hitchcock3_sample_nodetest:latest shippabledocker/hitchcock3_sample_nodetest:test12
     - docker push shippabledocker/hitchcock3_sample_nodetest:test12
-    - docker tag -f drydock/u12nod:prod shippabledocker/hitchcock3_sample_nodetest
+    - docker tag -f shippabledocker/hitchcock3_sample_nodetest:latest shippabledocker/hitchcock3_sample_nodetest:test22
     - docker push shippabledocker/hitchcock3_sample_nodetest:test22
 integrations:
   hub:
