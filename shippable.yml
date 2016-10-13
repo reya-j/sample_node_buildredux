@@ -14,9 +14,9 @@ env:
     - M1=ONE
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/hitchcock3_sample_nodetest:test1 .
-    - docker build -t=shippabledocker/hitchcock3_sample_nodetest:test2 .
+ # pre_ci:
+  #  - docker build -t=shippabledocker/hitchcock3_sample_nodetest:test1 .
+   # - docker build -t=shippabledocker/hitchcock3_sample_nodetest:test2 .
    # - docker build -t=revathird/testimage .
   pre_ci_boot:
     image_name: shippabledocker/hitchcock3_sample_nodetest
@@ -29,9 +29,9 @@ build:
   post_ci:
    # - docker build -t=quay.io/shippablequay/shiphitchcock1_sample_node_bb
     - docker tag -f drydock/u12nod:prod shippabledocker/hitchcock3_sample_nodetest
-    - docker push shippabledocker/hitchcock3_sample_nodetest:test1
+    - docker push shippabledocker/hitchcock3_sample_nodetest:test12
     - docker tag -f drydock/u12nod:prod shippabledocker/hitchcock3_sample_nodetest
-    - docker push shippabledocker/hitchcock3_sample_nodetest:test2
+    - docker push shippabledocker/hitchcock3_sample_nodetest:test22
 integrations:
   hub:
     - integrationName: rc-docker
