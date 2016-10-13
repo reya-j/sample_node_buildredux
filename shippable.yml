@@ -35,8 +35,8 @@ integrations:
   hub:
     - integrationName: rc-docker
       type: docker
-    - integrationName: rctest-docker
-      type: docker
+   # - integrationName: rctest-docker
+    #  type: docker
      # branches:
       #  only:
        #   - post_ci
