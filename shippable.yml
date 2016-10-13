@@ -16,11 +16,11 @@ build:
   #pre_ci:
    # - docker build -t=shippabledocker/hitchcock3_sample_node .
 
- # pre_ci_boot:
-  #  image_name: shippabledocker/sample_node_pvt
-   # image_tag: latest
-    #pull: true
-    #options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+  pre_ci_boot:
+    image_name: shippabledocker/sample_node_pvt
+    image_tag: latest
+    pull: true
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
@@ -29,10 +29,13 @@ build:
   post_ci:
     - docker build -t=shippabledocker/hitchcock3_sample_node:test .
     - docker push shippabledocker/hitchcock3_sample_node:test 
-
+    - docker build -t=revathird/hitchcock3_sample_node:test .
+    - docker push revathird/hitchcock3_sample_node:test 
 integrations:
   hub:
     - integrationName: rc-docker
+      type: docker
+    - integrationName: rctest-docker
       type: docker
      # branches:
       #  only:
