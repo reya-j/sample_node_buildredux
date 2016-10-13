@@ -34,9 +34,9 @@ integrations:
   hub:
     - integrationName: rc-docker
       type: docker
-      branches:
-        only:
-          - post_ci
+     # branches:
+      #  only:
+       #   - post_ci
           
 
 
