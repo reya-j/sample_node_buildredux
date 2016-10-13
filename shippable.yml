@@ -34,14 +34,14 @@ build:
   post_ci:
     - docker build -t=shippabledocker/hitchcock3_sample_node:test .
     - docker push shippabledocker/hitchcock3_sample_node:test 
-    - docker build -t=revathird/imagenode:test .
-    - docker push revathird/imagenode:test 
+  #  - docker build -t=revathird/imagenode:test .
+  #  - docker push revathird/imagenode:test 
 integrations:
   hub:
     - integrationName: rc-docker
       type: docker
-    - integrationName: rctest-docker
-      type: docker
+ #   - integrationName: rctest-docker
+  #    type: docker
      # branches:
       #  only:
        #   - post_ci
