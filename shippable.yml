@@ -34,7 +34,7 @@ build:
 
 integrations:
   hub:
-    - integrationName: rc-docker
+    - integrationName: alpha-docker
       type: docker
       branches:
         only:
