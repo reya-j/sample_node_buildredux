@@ -1,5 +1,5 @@
 # Language setting
-language: node_jswwe
+language: node_js
 
 # Version number
 node_js:
@@ -34,7 +34,7 @@ build:
 
 integrations:
   hub:
-    - integrationName: alpha-docker
+    - integrationName: rc-docker
       type: docker
       branches:
         only:
