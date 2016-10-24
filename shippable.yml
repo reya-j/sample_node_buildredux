@@ -26,13 +26,14 @@ build:
     - ps -eax
     - ls -al
 
- # post_ci:
-  #  - docker push shippabledocker/hitchcock3_sample_node
+  post_ci:
+    - docker build -t=shippabledocker/hitchcock3_sample_node:default
+    - docker push shippabledocker/hitchcock3_sample_node:default
 
-#integrations:
- # hub:
-  #  - integrationName: ship-docker
-   #   type: docker
+integrations:
+  hub:
+    - integrationName: rc-docker
+      type: docker
     #  branches:
      #   only:
       #    - dryockimage
