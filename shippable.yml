@@ -27,8 +27,8 @@ build:
     - ls -al
 
   post_ci:
-    - docker build -t=shippabledocker/hitchcock3_sample_node:default
-    - docker push shippabledocker/hitchcock3_sample_node:default
+    - docker build -t=shippabledocker/hitchcock3_sample_node:t1
+    - docker push shippabledocker/hitchcock3_sample_node:t1
 
 integrations:
   hub:
