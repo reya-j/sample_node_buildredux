@@ -19,19 +19,19 @@ build:
    # - docker build -t=shippabledocker/hitchcock3_sample_nodetest:test2 .
    # - docker build -t=revathird/testimage .
   pre_ci_boot:
-    image_name: shippabledocker/hitchcock3_sample_nodetest
-    image_tag: latest
-    pull: false
+    image_name: shippabledocker/pipeline_bb
+    image_tag: latest.42
+    pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
   ci:
     - ps -eax
     - ls -al
   post_ci:
    # - docker build -t=quay.io/shippablequay/shiphitchcock1_sample_node_bb
-    - docker tag -f shippabledocker/hitchcock3_sample_nodetest:latest shippabledocker/hitchcock3_sample_nodetest:test47
-    - docker push shippabledocker/hitchcock3_sample_nodetest:test47
-    - docker tag -f shippabledocker/hitchcock3_sample_nodetest:latest shippabledocker/hitchcock3_sample_nodetest:test48
-    - docker push shippabledocker/hitchcock3_sample_nodetest:test48
+    - docker tag -f shippabledocker/pipeline_bb:latest.42 shippabledocker/hitchcock3_sample_nodetest:test470
+    - docker push shippabledocker/hitchcock3_sample_nodetest:test470
+    #- docker tag -f shippabledocker/hitchcock3_sample_nodetest:latest shippabledocker/hitchcock3_sample_nodetest:test48
+    #- docker push shippabledocker/hitchcock3_sample_nodetest:test48
 integrations:
   hub:
     - integrationName: rc-docker
