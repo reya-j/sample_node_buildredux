@@ -17,8 +17,8 @@ build:
   #  - docker build -t=shippabledocker/hitchcock3_sample_node .
 
   pre_ci_boot:
-    image_name: drydock/u12nodall
-    image_tag: prod
+    image_name: shippabledocker/shiphitchcock1_testsamplenode
+    image_tag: latest
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
@@ -26,9 +26,9 @@ build:
     - ps -eax
     - ls -al
 
-  post_ci:
-    - docker build -t=shippabledocker/hitchcock3_sample_node:t1 .
-    - docker push shippabledocker/hitchcock3_sample_node:t1
+ # post_ci:
+  #  - docker build -t=shippabledocker/hitchcock3_sample_node:t1 .
+   # - docker push shippabledocker/hitchcock3_sample_node:t1
 
 integrations:
   hub:
