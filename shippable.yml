@@ -29,7 +29,11 @@ integrations:
     - integrationName: rc-docker
       type: docker
       
-  #post_ci:
+
+branches: 
+  except:
+    - master
+#post_ci:
    # - docker push revathird/testimage
 #git:
  #submodules: false
