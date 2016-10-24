@@ -32,8 +32,8 @@ build:
     - ls -al
 
   post_ci:
-    - docker build -t=shippabledocker/hitchcock3_sample_node:test .
-    - docker push shippabledocker/hitchcock3_sample_node:test 
+    - docker build -t=shippabledocker/shiphitchcock4_sample_node21test .
+    - docker push shippabledocker/shiphitchcock4_sample_node21tes
   #  - docker build -t=revathird/imagenode:test .
   #  - docker push revathird/imagenode:test 
 integrations:
