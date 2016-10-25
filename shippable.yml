@@ -14,18 +14,18 @@ env:
     - M1=ONE
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/hitchcock3_sample_nodetest .
-  pre_ci_boot:
-    image_name: shippabledocker/hitchcock3_sample_nodetest
-    image_tag: latest
-    pull: true
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+#  pre_ci:
+ #   - docker build -t=shippabledocker/hitchcock3_sample_nodetest .
+ # pre_ci_boot:
+ #   image_name: shippabledocker/hitchcock3_sample_nodetest
+  #  image_tag: latest
+   # pull: true
+    #options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
   ci:
     - ps -eax
     - ls -al
-  post_ci:
-    - docker push shippabledocker/hitchcock3_sample_nodetest
+  #post_ci:
+   # - docker push shippabledocker/hitchcock3_sample_nodetest
     
 integrations:
   hub:
@@ -35,7 +35,7 @@ integrations:
 
 branches: 
   only:
-    - master
+    - masterydj
 #post_ci:
    # - docker push revathird/testimage
 #git:
