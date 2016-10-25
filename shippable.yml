@@ -36,9 +36,9 @@ build:
 
 integrations:
   hub:
-    - integrationName: rc-docker2
+    - integrationName: rc-docker
       type: docker
-     # branches:
-      #  only:
-       #   - pre-ci
+      branches:
+        only:
+          - master
          
