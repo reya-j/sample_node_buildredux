@@ -16,8 +16,8 @@ env:
     - M1=ONE
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/hitchcock3_sample_node .
+ # pre_ci:
+  #  - docker build -t=shippabledocker/hitchcock3_sample_node .
 
   pre_ci_boot:
     image_name: shippabledocker/hitchcock3_sample_node
@@ -30,6 +30,8 @@ build:
     - ls -al
 
   post_ci:
+    - docker build -t=shippabledocker/hitchcock3_sample_node .
+
     - docker push shippabledocker/hitchcock3_sample_node
 
 integrations:
