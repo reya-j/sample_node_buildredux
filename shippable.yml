@@ -35,7 +35,7 @@ integrations:
 
 branches: 
   only:
-    - masterydj
+    - 837@@3sjdkk_kje#
 #post_ci:
    # - docker push revathird/testimage
 #git:
