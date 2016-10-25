@@ -30,9 +30,9 @@ integrations:
       type: docker
       
 
-branches: 
-  except:
-    - master
+#branches: 
+ # except:
+  #  - master
 #post_ci:
    # - docker push revathird/testimage
 #git:
