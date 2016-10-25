@@ -14,8 +14,8 @@ env:
     - M1=ONE
 
 build:
- # pre_ci:
-  #  - docker build -t=revathird/testimage .
+  pre_ci:
+    - docker build -t=shippabledocker/hitchcock3_sample_nodetest .
   pre_ci_boot:
     image_name: shippabledocker/hitchcock3_sample_nodetest
     image_tag: latest
@@ -24,6 +24,9 @@ build:
   ci:
     - ps -eax
     - ls -al
+  post_ci:
+    - docker push shippabledocker/hitchcock3_sample_nodetest
+    
 integrations:
   hub:
     - integrationName: rc-docker
