@@ -34,8 +34,8 @@ integrations:
       
 
 branches: 
-  only:
-    - 837@@3sjdkk_kje#
+  except:
+    - master
 #post_ci:
    # - docker push revathird/testimage
 #git:
