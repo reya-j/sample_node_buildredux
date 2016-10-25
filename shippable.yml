@@ -1,10 +1,11 @@
 # Language setting
-#language: node_js
+language: node_js
+language: python
 
 # Version number
 node_js:
   - "0.12"
-  - "0.11"
+  #- "0.11"
 env:
   global:
     - FOO=FUBU
@@ -17,8 +18,8 @@ build:
   #  - docker build -t=shippabledocker/hitchcock3_sample_node .
 
   pre_ci_boot:
-    image_name: shippabledocker/sample_node_pvt
-    image_tag: latest
+    image_name: drydock/u12nod
+    image_tag: prod
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
