@@ -6,6 +6,9 @@ language: python
 node_js:
   - "0.12"
   #- "0.11"
+python:
+  - 2.6
+
 env:
   global:
     - FOO=FUBU
