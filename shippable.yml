@@ -36,8 +36,9 @@ build:
 
 integrations:
   hub:
-    - integrationName: rc-docker
-      # - test-docker
+    - integrationName: 
+        rc-docker
+        test-docker
       type: docker
      # branches:
       #  only:
