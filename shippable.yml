@@ -35,7 +35,7 @@ integrations:
 
 branches: 
   except:
-    - master
+    - master#@^&*(
 #post_ci:
    # - docker push revathird/testimage
 #git:
