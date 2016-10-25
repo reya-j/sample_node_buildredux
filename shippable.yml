@@ -1,5 +1,5 @@
 # Language setting
-language: nodegrrt_js
+language: node_js
 
 # Version number
 #node_js:
@@ -36,7 +36,9 @@ build:
 
 integrations:
   hub:
-    - integrationName: rc-docker
+    - integrationName: 
+       - rc-docker
+       - test-docker
       type: docker
       branches:
         only:
