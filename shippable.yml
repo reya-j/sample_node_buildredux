@@ -19,7 +19,7 @@ build:
   pre_ci_boot:
     image_name: shippabledocker/sample_node_pvt
     image_tag: latest
-    pull: true
+    pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
  # pre_ci_boot:
   #  image_name: revathird/imagenode
