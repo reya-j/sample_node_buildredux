@@ -1,5 +1,5 @@
 # Language setting
-language: node_js
+#language: node_js
 
 # Version number
 node_js:
@@ -17,8 +17,8 @@ build:
   #  - docker build -t=shippabledocker/hitchcock3_sample_node .
 
   pre_ci_boot:
-    image_name: drydock/u12nod
-    image_tag: prod
+    image_name: shippabledocker/sample_node_pvt
+    image_tag: latest
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
