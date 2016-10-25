@@ -40,7 +40,7 @@ integrations:
        - rc-docker
        - test-docker
       type: docker
-      branches:
-        only:
-          - pre-ci
+     # branches:
+      #  only:
+       #   - pre-ci
          
