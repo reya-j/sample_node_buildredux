@@ -28,10 +28,10 @@ build:
     - ls -al
   post_ci:
    # - docker build -t=quay.io/shippablequay/shiphitchcock1_sample_node_bb
-    - docker tag -f shippabledocker/pipeline_bb:latest.42 shippabledocker/hitchcock3_sample_nodetest:test470
-    - docker push shippabledocker/hitchcock3_sample_nodetest:test470
-    #- docker tag -f shippabledocker/hitchcock3_sample_nodetest:latest shippabledocker/hitchcock3_sample_nodetest:test48
-    #- docker push shippabledocker/hitchcock3_sample_nodetest:test48
+    - docker tag -f shippabledocker/pipeline_bb:latest.42 shippabledocker/hitchcock3_sample_nodetest:testrc1
+    - docker push shippabledocker/hitchcock3_sample_nodetest:testrc1
+    - docker tag -f shippabledocker/hitchcock3_sample_nodetest:latest shippabledocker/hitchcock3_sample_nodetest:rc2
+    - docker push shippabledocker/hitchcock3_sample_nodetest:rc2
 integrations:
   hub:
     - integrationName: rc-docker
