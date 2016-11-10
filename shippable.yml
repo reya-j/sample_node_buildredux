@@ -32,18 +32,18 @@ build:
     - ls -al
 
   post_ci:
-    - docker build -t=shippabledocker/hitchcock3_sample_node:tagtest .
-    - docker push shippabledocker/hitchcock3_sample_node:tagtest
-    - docker build -t=revathird/hitchcock3_sample_node:tagtest .
-    - docker push revathird/hitchcock3_sample_node:tagtest
+    - docker build -t=shippabledocker/hitchcock3_sample_node:tagtest1 .
+    - docker push shippabledocker/hitchcock3_sample_node:tagtest1
+   # - docker build -t=revathird/hitchcock3_sample_node:tagtest .
+    #- docker push revathird/hitchcock3_sample_node:tagtest
   #  - docker build -t=revathird/imagenode:test .
   #  - docker push revathird/imagenode:test 
 integrations:
   hub:
     - integrationName: rc-docker
       type: docker
-    - integrationName: rc-shipdocker
-      type: docker
+ #   - integrationName: rc-shipdocker
+  #    type: docker
  #   - integrationName: rctest-docker
   #    type: docker
      # branches:
