@@ -19,8 +19,8 @@ build:
    # - docker build -t=shippabledocker/hitchcock3_sample_nodetest:test2 .
    # - docker build -t=revathird/testimage .
   pre_ci_boot:
-    image_name: shippabledocker/pipeline_bb
-    image_tag: latest.42
+    image_name: shippabledocker/pipelinev2
+    image_tag: deploy.1
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
   ci:
