@@ -19,8 +19,8 @@ build:
    # - docker build -t=shippabledocker/hitchcock3_sample_nodetest:test2 .
    # - docker build -t=revathird/testimage .
   pre_ci_boot:
-    image_name: shippabledocker/sample-node
-    image_tag: latest.114
+    image_name: shippabledocker/hitchcock3_sample_nodetest
+    image_tag: latest
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
   ci:
@@ -28,9 +28,9 @@ build:
     - ls -al
   post_ci:
    # - docker build -t=quay.io/shippablequay/shiphitchcock1_sample_node_bb
-    - docker tag -f shippabledocker/sample-node:latest.114 shippabledocker/hitchcock3_sample_nodetest:test33
+    - docker tag -f shippabledocker/hitchcock3_sample_nodetest:latest shippabledocker/hitchcock3_sample_nodetest:test33
     - docker push shippabledocker/hitchcock3_sample_nodetest:test33
-    - docker tag -f shippabledocker/sample-node:latest.114 shippabledocker/hitchcock3_sample_nodetest:rc2
+    - docker tag -f shippabledocker/hitchcock3_sample_nodetest:latest shippabledocker/hitchcock3_sample_nodetest:rc2
     - docker push shippabledocker/hitchcock3_sample_nodetest:rc2
 integrations:
   hub:
