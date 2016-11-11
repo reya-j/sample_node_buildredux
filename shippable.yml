@@ -40,7 +40,7 @@ build:
   #  - docker push revathird/imagenode:test 
 integrations:
   hub:
-    - integrationName: rc-docker
+    - integrationName: rc-dockeer
       type: docker
  #   - integrationName: rc-shipdocker
   #    type: docker
