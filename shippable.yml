@@ -36,6 +36,7 @@ integrations:
       branches: 
         only:
           - master
+          
        
 
  
