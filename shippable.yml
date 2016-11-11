@@ -41,7 +41,7 @@ build:
 integrations:
   hub:
     - integrationName: rc-docker
-      type: docker
+      type: quay.io
    # - integrationName: rc-shipdocker
     #  type: docker
  #   - integrationName: rctest-docker
