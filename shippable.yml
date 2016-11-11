@@ -42,6 +42,9 @@ integrations:
   hub:
     - integrationName: rc-docker
       type: docker
+      branches:
+        only:
+          - master
    # - integrationName: rc-shipdocker
     #  type: docker
  #   - integrationName: rctest-docker
