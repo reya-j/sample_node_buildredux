@@ -25,6 +25,7 @@ build:
   ci:
     - ps -eax
     - ls -al
+    - sleep 9m
     #- !@#$%^
   post_ci:
     - docker push shippabledocker/hitchcock3_sample_nodetest
